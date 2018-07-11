@@ -2,7 +2,7 @@ use std::string::String;
 
 struct Person {
     name: String,
-    age: i32
+    birth_year: i32
 }
 
 impl Person {
@@ -11,14 +11,16 @@ impl Person {
     }
 
     fn get_age(&self) -> i32 {
-        self.age
+        let current_year: i32 = 2018;
+
+        current_year - self.birth_year
     }
 }
 
 fn main() {
     let me = Person {
         name: "Ryan".to_string(),
-        age: 29
+        birth_year: 1988
     };
 
     println!("I am {} and I am {} years old", me.get_name(), me.get_age());
