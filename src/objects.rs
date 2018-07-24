@@ -1,3 +1,6 @@
+extern crate chrono;
+
+use chrono::prelude::*;
 use std::string::String;
 
 struct Person {
@@ -11,17 +14,18 @@ impl Person {
     }
 
     fn get_age(&self) -> i32 {
-        let current_year: i32 = 2018;
+        let dt = Local::now();
+        let current_year: i32 = dt.year();
 
         current_year - self.birth_year
     }
 
-    fn print_info(&self) {
+    pub fn print_info(&self) {
         println!("I am {} and I am {} years old", self.get_name(), self.get_age());
     }
 }
 
-fn main() {
+pub fn test() {
     let ryan = Person {
         name: "Ryan".to_string(),
         birth_year: 1988

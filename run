@@ -1,5 +1,0 @@
-#!/bin/bash
-
-: ${1?Exercise required}
-
-rustc "$1.rs" && ./$1 && mv $1 bin
