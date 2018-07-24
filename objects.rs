@@ -15,13 +15,24 @@ impl Person {
 
         current_year - self.birth_year
     }
+
+    fn print_info(&self) {
+        println!("I am {} and I am {} years old", self.get_name(), self.get_age());
+    }
 }
 
 fn main() {
-    let me = Person {
+    let ryan = Person {
         name: "Ryan".to_string(),
         birth_year: 1988
     };
 
-    println!("I am {} and I am {} years old", me.get_name(), me.get_age());
+    ryan.print_info();
+
+    let kevin = Person {
+        name: "Gaspare Bertoni".to_string(),
+        birth_year: 1777
+    };
+
+    kevin.print_info();
 }
