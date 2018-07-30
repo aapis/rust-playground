@@ -6,6 +6,7 @@ use colored::*;
 mod exercise {
     pub mod objects;
     pub mod arrays;
+    pub mod loops;
 }
 
 mod objects {
@@ -18,4 +19,7 @@ fn main() {
 
     println!("{}", "Running array tests".red());
     exercise::arrays::test();
+
+    println!("{}", "Running loop tests".red());
+    exercise::loops::test();
 }
