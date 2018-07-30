@@ -5,3 +5,4 @@ authors = ["Ryan Priebe <rpriebe@me.com>"]
 
 [dependencies]
 chrono = "0.4"
+colored = "1.6"

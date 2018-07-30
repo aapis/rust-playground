@@ -1,7 +1,19 @@
 extern crate chrono;
+extern crate colored;
 
-mod objects;
+mod exercise {
+    pub mod objects;
+    pub mod arrays;
+}
+
+mod objects {
+    pub mod person;
+}
 
 fn main() {
-    objects::test();
+    println!("Running object tests");
+    exercise::objects::test();
+
+    println!("Running array tests");
+    exercise::arrays::test();
 }
