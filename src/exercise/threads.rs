@@ -13,7 +13,6 @@ pub fn test() {
     }
 
     for thread in threads {
-        let th = thread.join();
-        println!("{:?}", th);
+        let _ = thread.join();
     }
 }
