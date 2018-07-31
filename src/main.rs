@@ -7,6 +7,7 @@ mod exercise {
     pub mod objects;
     pub mod arrays;
     pub mod loops;
+    pub mod threads;
 }
 
 mod objects {
@@ -14,12 +15,17 @@ mod objects {
 }
 
 fn main() {
+    use exercise::*;
+
     println!("{}", "Running object tests".red());
-    exercise::objects::test();
+    objects::test();
 
     println!("{}", "Running array tests".red());
-    exercise::arrays::test();
+    arrays::test();
 
     println!("{}", "Running loop tests".red());
-    exercise::loops::test();
+    loops::test();
+
+    println!("{}", "Running thread tests".red());
+    threads::test();
 }
